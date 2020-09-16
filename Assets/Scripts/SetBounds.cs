@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Этот скрипт устанавливает границы игрового поля
+ */
 public class SetBounds : MonoBehaviour
 {
     public BubbleSpawner Spawner;

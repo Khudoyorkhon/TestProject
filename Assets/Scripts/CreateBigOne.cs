@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Этот скрипт получает точку соприкосновения двух пузырей и создает новый пузырь у которого радиус равен сумме двух других
+ */
 public class CreateBigOne : MonoBehaviour
 {
     public GameObject Prefab;

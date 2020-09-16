@@ -2,6 +2,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Этот скрипт содержит функию DragAndDrop 
+ * Было использованно Unity Events System
+ */
 public class DragAndDrop : MonoBehaviour,IPointerDownHandler,IBeginDragHandler,IEndDragHandler,IDragHandler
 {
 

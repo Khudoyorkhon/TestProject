@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Этот скрипт создает пузырь и прямоугольник
+ */
 public class BubbleSpawner : MonoBehaviour
 {
     [SerializeField] private Camera _currentCamera = null;

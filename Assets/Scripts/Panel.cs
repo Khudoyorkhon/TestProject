@@ -2,6 +2,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
+ * Этот скрипт получает информацию прямоугольнике и на основе этой информации выравнивает его и проверятет может ли прямоугольник 
+ * помястится в него
+ */
 public class Panel : MonoBehaviour, IDropHandler
 {
     [SerializeField] RectTransform _rectTransform = null;

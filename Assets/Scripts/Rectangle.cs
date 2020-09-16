@@ -1,6 +1,9 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 
+/*
+ * Этот скрипт содержит информацию о прямоугольнике а так же переменные для выравнивания
+ */
 public class Rectangle : MonoBehaviour
 {
     [SerializeField] private RectTransform _rectTransform = null;

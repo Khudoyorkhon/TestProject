@@ -1,6 +1,10 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
+/*
+ * Этот скрипт увеличивает радиус пузыня на 10% и поределяет точку соприкосновения
+ */
+
 public class Bubble : MonoBehaviour
 {
     private float _radius, _radiusMultiplier=1.1f, _newRadius = 0f;
