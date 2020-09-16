@@ -9,7 +9,9 @@ public class BubbleSpawner : MonoBehaviour
     private Vector2 _screenSize, _spawnPoint;
     private float _rectWidth, _rectHeigth;
     private float _timer, _timeChanger = 0.02f;
-    private float _radiusMultiplier = 1.1f, _radius = 0;
+    private float _radiusMultiplier = 1.1f, _radius = 0,_xSize,_ySize;
+
+    private int _index = 0;
 
     [SerializeField] private int _objectMinRadius = 1, _objectMaxRadius = 10;
 
@@ -21,10 +23,21 @@ public class BubbleSpawner : MonoBehaviour
     public CreateBigOne CreateBigOne;
     public GameObject[] PrefabGameObject;
 
+    public float MinXSize,MaxXSize, MinYSize,MaxYSize;
+
+    public bool IsSquare = false;
+
+    public int Counter;
+
     // Start is called before the first frame update
     void Awake()
     {
         GetScreenSize();
+
+        for(int i = 0; i < Counter; i++)
+        {
+            CreateObject(PrefabGameObject);
+        }
     }
 
     // Update is called once per frame
@@ -34,7 +47,7 @@ public class BubbleSpawner : MonoBehaviour
 
         if(_timer >= TimeSpawn)
         {
-            CreateObject(PrefabGameObject[0]);
+            CreateObject(PrefabGameObject);
             _timer = 0;
         }
 
@@ -49,14 +62,56 @@ public class BubbleSpawner : MonoBehaviour
         print("heigth: " + _rectHeigth + " width: " + _rectWidth);
     }
 
-    private void CreateObject(GameObject prefab)
+    private void CreateObject(GameObject[] prefab)
     {
-        _radius = Random.Range(_objectMinRadius, _objectMaxRadius + 1);
+        if(IsSquare == true)
+        {
+            _index = Random.Range(0, prefab.Length);
 
-        _radius = _radius * _radiusMultiplier;
-        _spawnPoint = new Vector2(Random.Range(-_screenSize.x, _screenSize.x+1), Random.Range(-_screenSize.y + 1, _screenSize.y+1));
-        GameObject GO = Instantiate(prefab, _spawnPoint, Quaternion.identity,transform) as GameObject;
-        GO.GetComponent<Bubble>().SetData(_radius, CreateBigOne);
-        GO.transform.localScale = new Vector3(_radius, _radius, _radius);
+            print(_index);
+
+            switch (_index)
+            {
+                case 0:
+                    _radius = Random.Range(_objectMinRadius, _objectMaxRadius + 1);
+
+                    _radius = _radius * _radiusMultiplier;
+                    _spawnPoint = new Vector2(Random.Range(-_screenSize.x, _screenSize.x + 1), Random.Range(-_screenSize.y + 1, _screenSize.y + 1));
+                    GameObject GO = Instantiate(prefab[0], _spawnPoint, Quaternion.identity, transform) as GameObject;
+                    GO.GetComponent<Bubble>().SetData(_radius, CreateBigOne);
+                    GO.transform.localScale = new Vector3(_radius, _radius, _radius);
+
+                    Debug.Log("Game object is created and name of game object  is " + GO.gameObject.name);
+                    break;
+
+                case 1:
+
+                    _xSize = Random.Range(MinXSize, MaxXSize);
+                    _ySize = Random.Range(MinYSize, MaxYSize);
+
+                    _xSize = _xSize * _radiusMultiplier;
+                    _ySize = _ySize * _radiusMultiplier;
+
+                    _spawnPoint = new Vector2(Random.Range(-_screenSize.x, _screenSize.x + 1), Random.Range(-_screenSize.y + 1, _screenSize.y + 1));
+                    GameObject Rect = Instantiate(prefab[1], _spawnPoint, Quaternion.identity, transform) as GameObject;
+                    Rect.transform.localScale = new Vector3(_xSize, _ySize, 0);
+
+                    Debug.Log("Game object is created and name of game object  is " + Rect.gameObject.name);
+                    break;
+            }
+        }
+        else
+        {
+            _radius = Random.Range(_objectMinRadius, _objectMaxRadius + 1);
+
+            _radius = _radius * _radiusMultiplier;
+            _spawnPoint = new Vector2(Random.Range(-_screenSize.x, _screenSize.x + 1), Random.Range(-_screenSize.y + 1, _screenSize.y + 1));
+            GameObject GO = Instantiate(prefab[0], _spawnPoint, Quaternion.identity, transform) as GameObject;
+            GO.GetComponent<Bubble>().SetData(_radius, CreateBigOne);
+            GO.transform.localScale = new Vector3(_radius, _radius, _radius);
+
+            Debug.Log("Game object is created and name of game object  is " + GO.gameObject.name);
+        }
+
     }
 }

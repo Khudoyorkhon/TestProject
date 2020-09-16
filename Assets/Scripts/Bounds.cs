@@ -6,8 +6,10 @@ public class Bounds : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name + " is destroyed " + " by " + this.gameObject.name);
 
         Destroy(collision.gameObject, 2);
+
 
     }
 }

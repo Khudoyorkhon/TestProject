@@ -32,11 +32,13 @@ public class Panel : MonoBehaviour, IDropHandler
                             _width = _width - _heigth -_layoutGroup.spacing;
                             if(_width < 0)
                             {
-                                _width = _tempWidth;
+                                _width = 0;
                             }
                             rectangle.CanvasGroup.interactable = false;
                             rectangle.CanvasGroup.blocksRaycasts = false;
                             eventData.pointerDrag.GetComponent<RectTransform>().SetParent(transform);
+
+                            Debug.Log("new Heigth is : " + rectangle.LayoutElement.minHeight + " new Width  is : " + rectangle.LayoutElement.minWidth);
                         }
                         else
                         {
@@ -46,11 +48,13 @@ public class Panel : MonoBehaviour, IDropHandler
                             _width = _width - rectangle.Heigth - _layoutGroup.spacing;
                             if (_width < 0)
                             {
-                                _width = _tempWidth;
+                                _width = 0;
                             }
                             rectangle.CanvasGroup.interactable = false;
                             rectangle.CanvasGroup.blocksRaycasts = false;
                             eventData.pointerDrag.GetComponent<RectTransform>().SetParent(transform);
+
+                            Debug.Log("new Heigth is : " + rectangle.LayoutElement.minHeight + " new Width  is : " + rectangle.LayoutElement.minWidth);
                         }   
                         break;
 
@@ -60,26 +64,32 @@ public class Panel : MonoBehaviour, IDropHandler
                             if (rectangle.Width > _width)
                             {
                                 rectangle.LayoutElement.minWidth = _width;
+                                _width = _width - _width;
                             }
                             else
                             {
                                 rectangle.LayoutElement.minWidth = rectangle.Width;
+                                _width = _width - rectangle.Width- _layoutGroup.spacing;
                             }
 
                             if (rectangle.Heigth > _heigth)
                             {
                                 rectangle.LayoutElement.minHeight = _heigth;
+                                _width = _width - rectangle.Width - _layoutGroup.spacing;
                             }
                             else
                             {
                                 rectangle.LayoutElement.minHeight = rectangle.Heigth;
+                                _width = _width - rectangle.Width - _layoutGroup.spacing;
                             }
 
-                            _width = 0;
+                            
                             if (_width < 0)
                             {
-                                _width = _tempWidth;
+                                _width = 0;
                             }
+
+                            Debug.Log("new Heigth is : " + rectangle.LayoutElement.minHeight + " new Width  is : " + rectangle.LayoutElement.minWidth);
                             rectangle.CanvasGroup.interactable = false;
                             rectangle.CanvasGroup.blocksRaycasts = false;
                             eventData.pointerDrag.GetComponent<RectTransform>().SetParent(transform);
@@ -92,8 +102,11 @@ public class Panel : MonoBehaviour, IDropHandler
                             _width = _width - rectangle.Width - _layoutGroup.spacing;
                             if (_width < 0)
                             {
-                                _width = _tempWidth;
+                                _width = 0;
                             }
+
+                            Debug.Log("new Heigth is : " + rectangle.LayoutElement.minHeight + " new Width  is : " + rectangle.LayoutElement.minWidth);
+
                             rectangle.CanvasGroup.interactable = false;
                             rectangle.CanvasGroup.blocksRaycasts = false;
                             eventData.pointerDrag.GetComponent<RectTransform>().SetParent(transform);

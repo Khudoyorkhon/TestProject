@@ -522,11 +522,12 @@ MonoBehaviour:
   CreateBigOne: {fileID: 1927681681}
   PrefabGameObject:
   - {fileID: 6946691803647124653, guid: 6e60f3f64f3773b49a4c8b77ad784b86, type: 3}
+  - {fileID: 292592378655614040, guid: 11abd74aa4a729c4099a09752757a39b, type: 3}
   MinXSize: 1
   MaxXSize: 15
   MinYSize: 1
   MaxYSize: 15
-  IsSquare: 0
+  IsSquare: 1
   Counter: 5
 --- !u!1 &1248596414
 GameObject:

@@ -36,6 +36,8 @@ public class CreateBigOne : MonoBehaviour
             gameObject.transform.localScale = new Vector3(Radius, Radius, Radius);
 
             _canCreate = false;
+
+            Debug.Log("Game object is created and name of game object  is " + gameObject.gameObject.name);
         }
 
     }

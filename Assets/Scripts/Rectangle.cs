@@ -14,15 +14,17 @@ public class Rectangle : MonoBehaviour
     public float Heigth => _heigth;
     public string Type => _type;
     public LayoutElement LayoutElement => _layoutElement;
-
     public CanvasGroup CanvasGroup => _canvasGroup;
 
-
+    public float MinWidth, MaxWidth, MinHeigth, MaxHeigth;
     void Start()
     {
-        _width = _rectTransform.rect.width;
-        print("width : " + _width);
-        _heigth = _rectTransform.rect.height;
+        _width = Random.Range(MinWidth,MaxWidth);
+        _heigth = Random.Range(MinHeigth, MaxHeigth);
+
+        _rectTransform.sizeDelta = new Vector2(_width,_heigth);
+
+        print("width : " + _width);        
         print("heigth : " + _heigth);
 
         if(_width == _heigth)
