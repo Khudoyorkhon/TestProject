@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -516,18 +515,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentCamera: {fileID: 519420031}
-  _objectMinRadius: 1
-  _objectMaxRadius: 10
   TimeSpawn: 3
   CreateBigOne: {fileID: 1927681681}
   PrefabGameObject:
   - {fileID: 6946691803647124653, guid: 6e60f3f64f3773b49a4c8b77ad784b86, type: 3}
-  MinXSize: 1
-  MaxXSize: 15
-  MinYSize: 1
-  MaxYSize: 15
   IsSquare: 0
-  Counter: 5
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!1 &1248596414
 GameObject:
   m_ObjectHideFlags: 0

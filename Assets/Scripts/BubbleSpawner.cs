@@ -13,25 +13,37 @@ public class BubbleSpawner : MonoBehaviour
 
     private int _index = 0;
 
-    [SerializeField] private int _objectMinRadius = 1, _objectMaxRadius = 10;
-
+    private int _objectMinRadius = 1, _objectMaxRadius = 10;
 
     public float RectWidth => _rectWidth;
     public float RectHeigth => _rectHeigth;
+
     public int TimeSpawn = 3;
 
     public CreateBigOne CreateBigOne;
     public GameObject[] PrefabGameObject;
 
-    public float MinXSize,MaxXSize, MinYSize,MaxYSize;
+    private float MinXSize,MaxXSize, MinYSize,MaxYSize;
+
+    private int Counter;
 
     public bool IsSquare = false;
 
-    public int Counter;
+    public GameData Data;
 
     // Start is called before the first frame update
     void Awake()
     {
+        MinXSize = Data.MinSquareWidth;
+        MaxXSize = Data.MaxSquareWidth;
+        MinYSize = Data.MinSquareHeigth;
+        MaxYSize = Data.MaxSquareHeigth;
+
+        Counter = Data.OjectCount;
+
+        _objectMinRadius = Data.ObjectMinRadius;
+        _objectMaxRadius = Data.ObjectMaxRadius;
+
         GetScreenSize();
 
         for(int i = 0; i < Counter; i++)

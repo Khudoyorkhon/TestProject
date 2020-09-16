@@ -16,9 +16,18 @@ public class Rectangle : MonoBehaviour
     public LayoutElement LayoutElement => _layoutElement;
     public CanvasGroup CanvasGroup => _canvasGroup;
 
-    public float MinWidth, MaxWidth, MinHeigth, MaxHeigth;
+    public GameData Data;
+
+    private float MinWidth, MaxWidth, MinHeigth, MaxHeigth;
+
+
     void Start()
     {
+        MinWidth = Data.RectMinWidth;
+        MaxWidth = Data.RectMathWidth;
+        MinHeigth = Data.RectMinHeigth;
+        MaxHeigth = Data.RectMaxHeigth;
+
         _width = Random.Range(MinWidth,MaxWidth);
         _heigth = Random.Range(MinHeigth, MaxHeigth);
 
