@@ -200,7 +200,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.21698111, g: 0.052198283, b: 0.052198283, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -292,10 +291,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 796741771}
   _layoutElement: {fileID: 796741774}
   _canvasGroup: {fileID: 796741777}
-  MinWidth: 20
-  MaxWidth: 250
-  MinHeigth: 20
-  MaxHeigth: 250
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!114 &796741773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +341,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -455,7 +450,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -506,10 +500,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 806828780}
   _layoutElement: {fileID: 806828781}
   _canvasGroup: {fileID: 806828786}
-  MinWidth: 20
-  MaxWidth: 250
-  MinHeigth: 20
-  MaxHeigth: 250
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!225 &806828786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -578,10 +569,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 835327330}
   _layoutElement: {fileID: 835327333}
   _canvasGroup: {fileID: 835327336}
-  MinWidth: 20
-  MaxWidth: 250
-  MinHeigth: 20
-  MaxHeigth: 250
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!114 &835327332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +619,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -721,10 +708,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 965591381}
   _layoutElement: {fileID: 965591384}
   _canvasGroup: {fileID: 965591387}
-  MinWidth: 20
-  MaxWidth: 250
-  MinHeigth: 20
-  MaxHeigth: 250
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!114 &965591383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +758,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1117,10 +1100,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 1910250648}
   _layoutElement: {fileID: 1910250651}
   _canvasGroup: {fileID: 1910250654}
-  MinWidth: 20
-  MaxWidth: 250
-  MinHeigth: 20
-  MaxHeigth: 250
+  Data: {fileID: 11400000, guid: 5461984bc975ba7478bbe9c5e108e6ba, type: 2}
 --- !u!114 &1910250650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,7 +1150,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

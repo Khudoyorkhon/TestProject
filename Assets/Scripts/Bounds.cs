@@ -12,7 +12,7 @@ public class Bounds : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name + " is destroyed " + " by " + this.gameObject.name);
 
-        Destroy(collision.gameObject, 2);
+        Destroy(collision.gameObject,0.5f);
 
 
     }
